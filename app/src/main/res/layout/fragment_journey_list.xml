@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="uk.co.cardiff.council.morebike.JourneyFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".JourneyFragment"
+    tools:listitem="@layout/fragment_journey"
+    android:elevation="4dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:scrollbars="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    />

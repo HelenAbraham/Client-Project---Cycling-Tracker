@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:clickable="false"
+    >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        >
+        <Button
+            android:id="@+id/zoom_Out"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/zoom_out"
+            android:onClick="onZoom"
+            android:text=""
+            android:drawableEnd="@drawable/ic_zoom_out_black_24dp"
+            app:layout_anchor="@id/bar"
+            app:layout_anchorGravity="end|top"
+            android:gravity="top"
+            android:layout_gravity="top"
+            />
+
+        <Button
+            android:id="@+id/zoom_in"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/zoom_in"
+            android:drawableEnd="@drawable/ic_zoom_in_black_24dp"
+            android:onClick="onZoom"
+            android:text=""
+            app:layout_anchor="@id/zoom_Out"
+            app:layout_anchorGravity="center|top"
+            android:layout_gravity="top|center_horizontal"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:drawableEnd="@drawable/ic_settings_input_antenna_black_24dp"
+            android:text=""
+            app:layout_anchor="@id/zoom_in"
+            app:layout_anchorGravity="center|top"
+            android:layout_gravity="top|center_horizontal"
+            />
+
+        <Button
+            android:id="@+id/changeMyLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_language"
+            app:layout_anchor="@id/bar"
+            app:layout_anchorGravity="right|bottom"
+            android:backgroundTint="#01383f"
+            android:textColor="#ffffff"
+            android:layout_marginStart="57dp"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cardiff_logo"
+            android:adjustViewBounds="true"
+            android:maxWidth="70dp"
+            android:maxHeight="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            />
+
+        <uk.co.cardiff.council.morebike.GestureBottomAppBar
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#01383f"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/arrow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_arrow_drop_up_black_24dp"
+            android:drawableStart="@drawable/ic_arrow_drop_up_black_24dp"
+            android:backgroundTint="#01383f"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_stop_Button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded_button"
+            android:shadowColor="#78909c"
+            android:text="@string/start"
+            android:textColor="@color/startButtonTextColor"
+            android:textStyle="normal|bold"
+            app:layout_anchor="@id/bar"
+            app:layout_anchorGravity="center|top"
+            android:textSize="17sp"
+
+            />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/start_stop_Button"
+            app:layout_anchorGravity="center_horizontal|top"
+            android:layout_gravity="top|center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="30sp"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
